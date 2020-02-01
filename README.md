@@ -130,8 +130,6 @@ python manage.py migrate
 
 ![image](https://s2.ax1x.com/2020/01/31/13h0gO.png)
 
-
-
 6、 在app目录下的 views.py 里我们新增两个接口，一个是show_books**返回所有的书籍列表**（通过JsonResponse返回能被前端识别的json格式数据），二是add_book 接受一个get请求，往数据库里添加一条book数据
 
 ```python
@@ -220,7 +218,9 @@ python manage.py runserver
 
 ![image](https://s2.ax1x.com/2020/01/31/13TYhn.png)**测试接口方式二**：postman
 
+未完待续！！！
 
+学习链接：[Postman安装与使用](https://www.cnblogs.com/fnng/p/9136434.html)
 
 ## 四、 构建Vue.js前端项目
 
@@ -253,7 +253,6 @@ vue-init webpack appfront  //安装中把vue-router选上，我们须要它来�
 ```js
 npm install element-ui
 npm install axios
-npm install vue-axios
 ```
 
 然后在 src/main.js 在原有代码的基础上，添加下面代码：
@@ -408,7 +407,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 目前我们已经分别完成了 **Django 后端**和 **Vue.js 前端工程**的创建和编写，但实际上它们是运行在各自的服务器上，和我们的要求是不一致的。因此我们须要把Django的`TemplateView指向我们刚才生成的前端dist文件即可。`
 
-我个人理解，如果要想实现前后端分离的项目，基本不用看下面的内容，Vue.js 实现项目的前台，Django 实现项目的后台，提供 api。
+我个人理解，如果要想实现**前后端分离的项目**，基本不用看下面的内容，Vue.js 实现项目的前台，Django 实现项目的后台，提供 api。
 
 1、 找到project目录的urls.py，使用通用视图创建最简单的模板控制器，访问 『/』时直接返回 index.html：
 
@@ -477,6 +476,6 @@ STATIC_URL = '/static/'
 
 实例项目的源码都可以点击下面的链接进入下载：
 
-
+https://github.com/xyyojl/django_with_vue
 
 最后，特别感谢原作者 [．╂遊牧](https://cloud.tencent.com/developer/user/1002805) 写的博客 [整合 Django + Vue.js 框架快速搭建web项目](https://cloud.tencent.com/developer/article/1005607)，整篇博客文章参考原作者写的博客，采用最新的技术栈重写那个实例项目，跟原来的会有写不一样。
