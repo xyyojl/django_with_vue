@@ -1,4 +1,4 @@
-# 整合 Django + Vue.js 框架快速搭建web项目
+# 整合 Django 2.x + Vue.js 框架快速搭建web项目
 
 ## 一、 背景
 
@@ -65,7 +65,7 @@ python manage.py startapp myapp
 
 ![Snipaste 2020 01 31 17 09 41](https://s2.ax1x.com/2020/01/31/13Wnqs.png)
 
-4、在myproject下的settings.py配置文件中，把默认的sqllite3数据库换成我们的mysql数据库：
+4、在myproject下的settings.py配置文件中，把默认的sqlite3数据库换成我们的mysql数据库：
 
 ```python
 # Database
@@ -80,6 +80,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
     }
 }
+# 温馨小提示
 # 将上面的 user 和 password 换成你自己的，同时保证自己有一个数据库名为 myproject 的数据库
 ```
 
@@ -218,9 +219,22 @@ python manage.py runserver
 
 ![image](https://s2.ax1x.com/2020/01/31/13TYhn.png)**测试接口方式二**：postman
 
-未完待续！！！
+通过postman测试一下我们刚才写的两个接口：
 
-学习链接：[Postman安装与使用](https://www.cnblogs.com/fnng/p/9136434.html)
+add_book 接口：
+
+![image](https://s2.ax1x.com/2020/02/04/1DQ1Qs.md.png)
+
+show_books 接口：
+
+![image](https://s2.ax1x.com/2020/02/04/1DQ6w6.md.png)
+
+学习链接：
+
+- [Postman 使用教程详解](https://www.jianshu.com/p/6c9b45994c34)
+- [postman的使用方法详解！最全面的教程](https://www.cnblogs.com/Skyyj/p/6856728.html)
+
+- [Postman安装与使用](https://www.cnblogs.com/fnng/p/9136434.html)
 
 ## 四、 构建Vue.js前端项目
 
@@ -459,7 +473,7 @@ STATICFILES_DIRS = [
 
 ![image](https://s2.ax1x.com/2020/01/31/18K8Qs.png)
 
-**注意服务的端口已经是Django服务的8000而不是node服务的8080了**
+**注：服务的端口已经是Django服务的8000而不是node服务的8080了**
 
 ## 六、 部署
 
